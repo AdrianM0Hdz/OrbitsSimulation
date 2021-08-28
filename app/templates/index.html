@@ -1,1 +1,16 @@
-Hello 
+{% extends 'base.html' %}
+
+{% block title %}Orbits simulator{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+<h1>Orbits simulator</h1>
+<div id="planet">
+</div>
+<div id="sun">
+</div>
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
